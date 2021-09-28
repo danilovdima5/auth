@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <h1>Регистрация</h1>
+
+      <label for="login">
+        <input id="login" type="text" placeholder="Логин" pattern="^[0-9a-zA-Z\s]+$" required/>
+        <span>Логин</span>
+      </label>
+
+      <p id="emailMismatch">E-mail должен быть по маске example@gmail.com</p>
+      <label for="email">
+        <input id="email" type="text" placeholder="E-Mail" required/>
+        <span>E-mail</span>
+      </label>
+
+      <label for="phone">
+        <input
+          id="phone"
+          type="tel"
+          placeholder="Телефон"
+          pattern="[+]7\s[\(]\d{3}[\)]\s\d{3}\s\d{2}\s\d{2}"
+          required
+        />
+        <span>Телефон</span>
+      </label>
+
+      <label for="password">
+        <input id="password" type="password" placeholder="Пароль" minlength="8" required/>
+        <a href="#" class="togglePasswords" id="togglePassword" onclick=""></a>
+        <span>Пароль</span>
+      </label>
+
+      <p id="passwordMismatch">Пароли не совпадают</p>
+      <label for="repeatPassword">
+        <input id="repeatPassword" type="password" placeholder="Подтверждение пароля" required/>
+        <a href="#" class="togglePasswords" id="toggleRepeatPassword" onclick=""></a>
+        <span>Подтверждение пароля</span>
+      </label>
+
+      <input id="button" type="submit" value="Зарегистрироваться" />
+    </form>
+    <div id="mainContent">
+      <h1 id="helloUser"></h1>
+      <input type="submit" id="signOut" value="Выйти"></button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
